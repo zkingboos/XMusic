@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xmusic.server.side.Controller">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="400.0" tabMaxWidth="600.0" tabMinWidth="180.0">
+        <tabs>
+          <Tab text="Console">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="StartServer_button" layoutX="14.0" layoutY="292.0" mnemonicParsing="false" onAction="#StartAndStop" prefHeight="66.0" prefWidth="151.0" text="Iniciar Servidor">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="sendCommand_button" disable="true" layoutX="178.0" layoutY="322.0" mnemonicParsing="false" onAction="#callCommand" prefHeight="37.0" prefWidth="88.0" text="Enviar">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Separator layoutX="169.0" orientation="VERTICAL" prefHeight="388.0" prefWidth="1.0" />
+                        <Label layoutX="181.0" layoutY="14.0" text="Console:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="CommandBox" disable="true" layoutX="273.0" layoutY="321.0" prefHeight="37.0" prefWidth="317.0" />
+                        <TextArea fx:id="Console" editable="false" layoutX="181.0" layoutY="36.0" prefHeight="279.0" prefWidth="407.0" wrapText="true" />
+                        <Label layoutX="14.0" layoutY="14.0" text="Status:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="LoadServer" layoutX="14.0" layoutY="269.0" text="Iniciando o servidor...">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Gerenciar">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.29797979797979796" prefHeight="378.0" prefWidth="609.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ListView layoutX="1.0" layoutY="56.0" prefHeight="314.0" prefWidth="176.0" />
+                                    <Label layoutX="1.0" layoutY="6.0" text="Porta:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="1.0" layoutY="30.0" text="Onlines:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Spinner fx:id="spinner" layoutX="48.0" layoutY="6.0" prefHeight="23.0" prefWidth="123.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
